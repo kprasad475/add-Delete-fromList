@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+    {% block content %}
+    <div class="container">
+        <form class="border mt-5 mb-2" method="post" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input class="form-control mb-2" type="text" name="name" placeholder="Movie name" value="{{movies.name}}">
+    
+            <input class="form-control mb-2" type="number" name="rate" placeholder="Rate" value="{{movies.rate}}">
+    
+            <input class="form-control mb-2" type="text" name="screen" placeholder="Screen" value="{{movies.screen}}">
+    
+            <input class="form-control mb-2" type="text" name="language" placeholder="Language" value="{{movies.language}}">
+    
+            <input class="form-control mb-2" type="number" name="duration" placeholder="Duration" value="{{movies.duration}}">
+    
+            <input class="form-control mb-2" type="text" name="category" placeholder="Category" value="{{movies.category}}">
+    
+            <input class="form-control mb-2" type="text" name="certification" placeholder="certification" value="{{movies.certification}}">
+    
+            <input class="form-control mb-2" type="date" name="date" placeholder="Releas date" value="{{movies.date}}">
+    
+            <input class="form-control mb-2" type="file" name="image" placeholder="Poster">
+    
+            <input class="form-control mb-2" type="file" name="banner" placeholder="Banner">
+    
+            <input class="form-control mb-2" type="text" name="description" placeholder="Description" value="{{movies.description}}">
+            
+            <button class="btn btn-success mb-3 mt-3" style="margin-left: 450px;">Update</button>
+        </form>  
+{% endblock %}

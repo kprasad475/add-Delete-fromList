@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <form class="border mt-5 mb-2" method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input class="form-control mb-2" type="text" name="name" placeholder="Movie name">
+
+        <input class="form-control mb-2" type="number" name="rate" placeholder="Rate">
+
+        <input class="form-control mb-2" type="text" name="screen" placeholder="Screen">
+
+        <input class="form-control mb-2" type="text" name="language" placeholder="Language">
+
+        <input class="form-control mb-2" type="text" name="duration" placeholder="Duration">
+
+        <input class="form-control mb-2" type="text" name="category" placeholder="Category">
+
+        <input class="form-control mb-2" type="text" name="certification" placeholder="certification">
+
+        <input class="form-control mb-2" type="date" name="date" placeholder="Releas date">
+
+        <input class="form-control mb-2" type="file" name="image" placeholder="Poster">
+
+        <input class="form-control mb-2" type="file" name="banner" placeholder="Banner">
+
+        <input class="form-control mb-2" type="text" name="description" placeholder="Description">
+        
+        <button class="btn btn-success mb-3 mt-3" style="margin-left: 450px;">ADD</button>
+    </form>
+  
+</div>
+
+
+
+{% endblock %}

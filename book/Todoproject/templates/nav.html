@@ -1,0 +1,36 @@
+{% load static %}
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="nav-link" href="{% url 'home' %}"><img class="pic" src="../static/image/book1.jpg" width="110px" alt=""></a>
+    <form class="d-flex" role="search">
+      <input class="scr form-control me-2" type="search" placeholder="Search for Movies,Events,Plays,Sports and Activates" aria-label="Search">
+      <a href="{% url 'form' %}" class="mr btn btn-success me-2">Add Movie</a>
+      <button class="btn btn-danger me-2" type="submit">sign</button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+    </form>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg nv">
+      <div class="navbar-nav nvm">
+        <a class="nav-link active" aria-current="page" href="#">Movies</a>
+        <a class="nav-link active" aria-current="page" href="#">Stream</a>
+        <a class="nav-link active" aria-current="page" href="#">Events</a>
+        <a class="nav-link active" aria-current="page" href="#">Plays</a>
+        <a class="nav-link active" aria-current="page" href="#">Sporrs</a>
+        <a class="nav-link active" aria-current="page" href="#">Activities</a>
+        <div class="nvml">
+        <a class="nav-link ms-5" href="#">ListYouShow</a>
+        </div>
+        <a class="nav-link" href="#">corporates</a>
+        <a class="nav-link" href="#">Offers</a>
+        <a class="nav-link" href="#">Gift Cards</a>
+      </div>
+</nav>
