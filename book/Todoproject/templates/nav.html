@@ -5,7 +5,8 @@
     <form class="d-flex" role="search">
       <input class="scr form-control me-2" type="search" placeholder="Search for Movies,Events,Plays,Sports and Activates" aria-label="Search">
       <a href="{% url 'form' %}" class="mr btn btn-success me-2">Add Movie</a>
-      <button class="btn btn-danger me-2" type="submit">sign</button>
+      <a href="{% url 'auth:register' %}" class="btn btn-danger me-2" type="submit">sign</a>
+     
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
