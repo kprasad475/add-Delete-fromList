@@ -22,9 +22,9 @@ def registerUser(req):
                 messages.info(req,"email already exist")
                 return redirect('auth:register')
             else:
-                user=User.objects.create_user(first_name=fname,last_name=lname,email=email,username=username,password=password)
+                user=User.objects.create_superuser(first_name=fname,last_name=lname,email=email,username=username,password=password)
                 user.save()
-                return redirect('home')
+                return redirect('auth:login')
         else:
             messages.info(req,"password not matched")
             return redirect('auth:register')
@@ -36,3 +36,14 @@ def loginUser(req):
     if req.method=='POST':
         username=req.POST.get("username","")
         password=req.POST.get("password","")
+        user=auth.authenticate(username=username,password=password)
+        print(user)
+        if user is not None:
+            auth.login(req,user)
+            return redirect('home')
+        else:
+            messages.info(req,"invalidcredentials")
+            return redirect('auth:login')
+    return render(req,'loginuser.html')
+    
+            
