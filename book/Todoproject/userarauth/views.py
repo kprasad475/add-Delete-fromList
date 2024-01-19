@@ -45,5 +45,12 @@ def loginUser(req):
             messages.info(req,"invalidcredentials")
             return redirect('auth:login')
     return render(req,'loginuser.html')
+
+
+
+def logoutUser(req):
+    auth.logout(req)
+    return redirect("home")
+    
     
             

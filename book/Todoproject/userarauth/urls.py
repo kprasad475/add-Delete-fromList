@@ -5,6 +5,8 @@ app_name='auth'
 urlpatterns = [
     path('register/',views.registerUser,name='register'),
     path('loginuser/',views.loginUser,name='login'),
+    path('logoutuser/',views.logoutUser,name='logout'),
+    
     
     
 ]
