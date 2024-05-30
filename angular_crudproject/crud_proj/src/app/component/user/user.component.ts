@@ -26,6 +26,10 @@ export class UserComponent implements OnInit {
     console.log(this.userDetails.filteredData)
   }
 
+  // private getUsers(){
+  //   this.userDetails = new MatTableDataSource <Element>(this.userService.getUser())
+  // }
+
   public openPopup() {
     const dialogRef = this.dialog.open(AddEditUserComponent, {
       width: '350px',
@@ -37,18 +41,32 @@ export class UserComponent implements OnInit {
     });
   }
 
-  public editUser(index:any, data:any) {
+  // public editUser(index:any, data:any) {
+  //   data.id = index;
+  //   data.action = 'edit';
+  //   const dialogRef = this.dialog.open(AddEditUserComponent, {
+  //     width: '350px',
+  //     data: data
+  //   });
+
+  //   dialogRef.afterClosed().subscribe(() => {
+  //     this.getUsers();
+  //   });
+  // }
+
+  public editUser(index:any,data:any){
     data.id = index;
     data.action = 'edit';
-    const dialogRef = this.dialog.open(AddEditUserComponent, {
-      width: '350px',
-      data: data
+    const dialogRef = this.dialog.open(AddEditUserComponent,{
+      width:'350px',
+      data:data
     });
-
-    dialogRef.afterClosed().subscribe(() => {
+    dialogRef.afterClosed().subscribe(()=>{
       this.getUsers();
-    });
+    })
   }
+
+  
 
   public deleteUser(index:any) {
     const data = {

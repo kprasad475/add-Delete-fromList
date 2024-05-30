@@ -12,6 +12,7 @@ export class AddEditUserComponent implements OnInit {
   addUserForm!: FormGroup;
    userDetails :any [] = [];
    userType!: [{ id: string; firstName: string; lastName: string; email: string; contact: string; }];
+  
  
   constructor(
     public dialogRef: MatDialogRef<AddEditUserComponent>, 
@@ -57,6 +58,17 @@ export class AddEditUserComponent implements OnInit {
       this.dialogRef.close();
     // this.userDetails.push(this.incomingData)
     // console.log(this.addUserForm.value)
+    }
+  }
+
+  public addUsers(){
+    if(this.incomingData && this.incomingData.action && this.incomingData.action === 'edit'){
+      this.userService.editUser(this.incomingData.id ,this.addUserForm.value);
+      this.dialogRef.close();
+    }
+    else{
+      this.userService.addUser(this.addUserForm.value);
+      this.dialogRef.close();
     }
   }
 

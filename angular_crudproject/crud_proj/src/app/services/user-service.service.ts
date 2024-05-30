@@ -25,8 +25,16 @@ export class UserService {
     console.log(data)
   }
 
+  // public addUsers(data:UserType){
+  //   this.userDetails.push(data)
+  // }
+
   public editUser(index: number, data: UserType) {
     this.userDetails[index] = data;
+  }
+
+  public editUsers(index:number,data:UserType){
+    this.userDetails[index]=data;
   }
 
   public deleteUser(index: number) {
