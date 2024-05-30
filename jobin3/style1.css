@@ -1,0 +1,39 @@
+.add{
+    text-align: center;font-weight: bold;
+}
+.srs{
+    height:60%;border: 5px solid rgb(214, 152, 93);width: 100%;
+}
+.ad{
+    background-color: rgb(235, 235, 228);
+}
+.sds{
+    height:37.5%;border: 5px solid rgb(214, 152, 93);width: 100%;
+}
+.fit{
+    height:50%;border: 5px solid rgb(214, 152, 93);
+}
+.gdd {
+    height:350px;
+}
+.fits{
+    height: 75%;border: 5px solid rgb(214, 152, 93);width:100%;
+}
+.pp1{
+    margin-top: -3%;
+}
+.fitss{
+    height: 75%;margin-left:-1%;border: 5px solid rgb(214, 152, 93);width: 100%;
+}
+.para1{
+    text-align: justify;
+}
+.pp2{
+    margin-top: -6%;
+}
+.fix{
+    height: 62%;border: 5px solid rgb(214, 152, 93);width:100%;
+}
+.fixs{
+    height: 35%;border: 5px solid rgb(214, 152, 93);width:100%;margin-left: -6%;
+}

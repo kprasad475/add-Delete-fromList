@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Item List</title>
+</head>
+<body>
+  <h1>Items</h1>
+  <a href="{% url 'download_history' %}">History</a>
+  <ul>
+    {% for item in items %}
+      <li>
+        <a href="{% url 'item_detail' item.id %}">{{ item.name }}</a>
+        {% if item.description %}
+          <p>{{ item.description }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

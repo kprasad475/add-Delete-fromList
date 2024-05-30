@@ -1,0 +1,19 @@
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+table {
+    width: 100%;
+}
+
+.edit-btn {
+    border: none;
+    background: none;
+}
+
+.delete-btn {
+    border: none;
+    background: none;
+}

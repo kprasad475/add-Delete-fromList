@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Download History</title>
+</head>
+<body>
+  <h1>My Downloads</h1>
+
+  {% if downloaded_items %}
+    <ul>
+      {% for item in downloaded_items %}
+        <li>
+          {{ item.item.name }} (Downloaded: {{ item.downloaded_date }})
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>You haven't downloaded any items yet.</p>
+  {% endif %}
+</body>
+</html>

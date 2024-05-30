@@ -1,0 +1,26 @@
+.p1 {
+  margin-left: 60%;
+}
+.lemon{
+  background: url("image-header.jpg") bottom no-repeat ;
+  background-size: 100%;
+  width: 850px;
+  height: 650px;
+}
+
+.cont{
+  font-size: 56px;
+  text-transform: uppercase;
+  color: #FFF;
+  letter-spacing: 6px;
+  padding-bottom: 10vh;
+
+  font-family: 'Fraunces', serif;
+  font-weight: 1000;
+ text-align: center;
+ margin-top: 17%;
+}
+
+.arrow{
+  margin-left:50%;
+}

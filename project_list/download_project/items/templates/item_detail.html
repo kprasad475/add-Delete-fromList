@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Item Details</title>
+</head>
+<body>
+  <h1>{{ item.name }} Details</h1>
+  <p>{{ item.description }}</p>
+
+    <form method="POST" action="{% url 'download_item' item.id %}">
+      {% csrf_token %}
+      <button type="submit">Download</button>
+    </form>
+
+
+</body>
+</html>
