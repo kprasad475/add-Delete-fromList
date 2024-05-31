@@ -182,7 +182,11 @@
   <button (click)="addItem()">Add item</button>
 </div>
 <ul>
-  <li *ngFor="let item of items; let i = index">{{item}}
+  <li *ngFor="let item of items; let i = index">
+    <span *ngIf="!editingIndex[i]">{{item}}</span>
+  <input *ngIf="editingIndex[i]" [(ngModel)]="editItemValue" (keydown.enter)="saveItem(i)"/>
+  <button *ngIf="!editingIndex[i]" (click)="editItem(i,item)">Edit</button>
+  <button *ngIf="editingIndex[i]" (click)="saveItem(i)">Save</button>
   <button (click)="deleteItem(i)">Delete</button></li>
 </ul>
 
